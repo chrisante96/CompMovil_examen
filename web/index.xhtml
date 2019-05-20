@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" 
+        xmlns:p="http://primefaces.org/ui" 
+	xmlns:pm="http://primefaces.org/mobile">
+<f:view renderKitId="PRIMEFACES_MOBILE" /> 
+    <h:head>
+    </h:head>
+    <h:body>
+        <pm:page>
+            <pm:header title="Mayor de Tres Numeros"></pm:header>
+            <pm:content>
+                <h:form id="formu">
+                    <p:growl id="growl" showDetail="true" />
+                    <pm:field>
+                        <p:outputLabel  value="Numero 1:" />
+                        <p:inputText id="n1" value="#{mobiJavaBeans.n1}" />
+                    </pm:field>
+                    <pm:field>
+                        <p:outputLabel value="Numero 2:" />
+                        <p:inputText id="n2" value="#{mobiJavaBeans.n2}" />
+                    </pm:field>
+                    <pm:field>
+                        <p:outputLabel value="Numero 3:" />
+                        <p:inputText id="n3" value="#{mobiJavaBeans.n3}" />
+                    </pm:field>
+                    <p:commandButton value="Mayor" update="growl" icon="check" actionListener="#{mobiJavaBeans.mayor()}" />
+                </h:form>
+            </pm:content>
+            <pm:footer title="jhonny pascual colque"></pm:footer>
+        </pm:page>
+    </h:body>
+</html>
