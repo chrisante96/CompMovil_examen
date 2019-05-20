@@ -11,26 +11,29 @@
     </h:head>
     <h:body>
         <pm:page>
-            <pm:header title="Mayor de Tres Numeros"></pm:header>
+            <pm:header title="EJERCICO DE EXAMEN"></pm:header>
+            <pm:header title="COMPUTACION MOVIL"></pm:header>
+            <pm:header title="MAYOR DE TRES NUMERO ENTEROS"></pm:header>
             <pm:content>
-                <h:form id="formu">
+                <h:form id="formulario">
                     <p:growl id="growl" showDetail="true" />
                     <pm:field>
-                        <p:outputLabel  value="Numero 1:" />
-                        <p:inputText id="n1" value="#{mobiJavaBeans.n1}" />
+                        <p:outputLabel  value="PRIMER NUMERO:" />
+                        <p:inputText id="num1" value="#{mobiJavaBeans.num1}" />
                     </pm:field>
                     <pm:field>
-                        <p:outputLabel value="Numero 2:" />
-                        <p:inputText id="n2" value="#{mobiJavaBeans.n2}" />
+                        <p:outputLabel value="SEGUNDO NUMERO:" />
+                        <p:inputText id="num2" value="#{mobiJavaBeans.num2}" />
                     </pm:field>
                     <pm:field>
-                        <p:outputLabel value="Numero 3:" />
-                        <p:inputText id="n3" value="#{mobiJavaBeans.n3}" />
+                        <p:outputLabel value="TERCER NUMERO:" />
+                        <p:inputText id="num3" value="#{mobiJavaBeans.num3}" />
                     </pm:field>
-                    <p:commandButton value="Mayor" update="growl" icon="check" actionListener="#{mobiJavaBeans.mayor()}" />
+                    
+                    <p:commandButton value="VER RESULTADO" update="growl" actionListener="#{mobiJavaBeans.mayor()}" />
+                    <p:commandButton value="LIMPIAR CAMPOS" actionListener="#{moviJavaBeans.setlimpiar()}"/>
                 </h:form>
             </pm:content>
-            <pm:footer title="jhonny pascual colque"></pm:footer>
         </pm:page>
     </h:body>
 </html>
